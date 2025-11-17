@@ -4,37 +4,43 @@ import { Link } from "react-router-dom";
 
 const Index = () => {
   const skills = [
-    "Python", "SQL", "Excel", "Tableau",
-    "Power BI", "R", "Statistics", "Data Visualization",
-    "Machine Learning", "Pandas", "NumPy", "ETL"
+    "SQL", "dbt", "Azure Databricks", "Python",
+    "Power BI", "R", "Statistics", "ETL"
   ];
 
   const experiences = [
     {
-      title: "Senior Data Analyst",
-      company: "Tech Company Inc",
-      period: "2022 - Present",
-      description: "Lead data-driven decision making initiatives across the organization. Built automated reporting dashboards and performed advanced statistical analysis to drive business growth."
-    },
-    {
       title: "Data Analyst",
-      company: "Financial Services Corp",
-      period: "2020 - 2022",
-      description: "Analyzed customer behavior patterns and market trends to optimize marketing strategies. Created interactive visualizations and reports using Tableau and Power BI."
+      company: "Gjensidige Forsikring",
+      period: "2024 - Present",
+      description: "I've been involved in AI, automation, and web analytics initiatives in the Claims division. Working on building and maintaining ETL pipelines through dbt-models and visualizing in Power BI. Currently focused on customer experience and insight development."
     },
     {
-      title: "Junior Data Analyst",
-      company: "Retail Analytics",
-      period: "2019 - 2020",
-      description: "Performed data cleaning and ETL processes. Developed SQL queries for data extraction and created Excel-based reports for stakeholders."
+      title: "Consulting Intern",
+      company: "Movability",
+      period: "2022 - 2024",
+      description: "Responsible for bookkeeping and preparation of accounts, and research on various topics regarding mobility."
+    },
+    {
+      title: "Business Analyst Intern",
+      company: "SAS Institute",
+      period: "Aug 2023 - Oct 2023",
+      description: "Worked in a team analyzing business data for a telecom client to deliver actionable insights that optimized operations. Built end-to-end analytics solutions using SAS, including data transformation, modeling, and visualization."
     }
   ];
 
   const education = [
     {
-      degree: "Bachelor of Science in Computer Science",
-      school: "University Name",
-      period: "2015 - 2019"
+      degree: "Master of Science in Business Analytics",
+      school: "BI Norwegian Business School",
+      period: "2022 - 2024",
+      description: "Thesis on predicting tax avoidance using a CETR-based model with social network characteristics. Grade: A"
+    },
+    {
+      degree: "Bachelor of Science in Economics and Leadership",
+      school: "University of Southeastern-Norway",
+      period: "2019 - 2022",
+      description: "Specialized in finance. Thesis on Strategic Analysis. Winner of the award for best bachelor thesis. Grade: A"
     }
   ];
 
@@ -57,20 +63,22 @@ const Index = () => {
       <section className="pt-32 pb-20 px-6">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-6xl font-bold mb-4 text-foreground">
-            Jane Anderson
+            Daniel Nursen
           </h1>
           <p className="text-2xl md:text-3xl text-muted-foreground mb-6">
-            Data Analyst & Business Intelligence Specialist
+            Data Analyst
           </p>
           <p className="text-lg text-muted-foreground max-w-2xl mb-8">
             Transforming complex data into actionable insights. 
             Specialized in data visualization, statistical analysis, and driving data-informed business decisions.
           </p>
           <div className="flex gap-4 flex-wrap">
-            <Button className="bg-accent hover:bg-accent/90 text-accent-foreground">
-              <Download className="mr-2 h-4 w-4" />
-              Download Resume
-            </Button>
+            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="inline-block">
+              <Button className="bg-accent hover:bg-accent/90 text-accent-foreground">
+                <Download className="mr-2 h-4 w-4" />
+                Download Resume
+              </Button>
+            </a>
           </div>
         </div>
       </section>
@@ -80,12 +88,17 @@ const Index = () => {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold mb-8 text-foreground">About Me</h2>
           <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-            I'm a data analyst with 5+ years of experience transforming raw data into strategic insights. 
-            I specialize in uncovering patterns, building predictive models, and creating compelling visualizations that drive business outcomes.
+            I'm a data analyst at a large Nordic insurance company. 
+            I am passionate about leveraging data to solve complex business problems and drive strategic decision-making.
           </p>
           <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-            When I'm not analyzing data, you'll find me exploring new analytical techniques, participating in data science competitions, 
-            or contributing to data-focused communities and forums.
+            I hold a Master of Science in Business Analytics from BI Norwegian Business School, where I wrote my thesis on predicting tax avoidance using a CETR-based model while incorporating social network characteristics.
+          </p>
+          <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+            My top 5 CliftonStrengths are Context, Relator, Discipline, Achiever and Consistency.
+          </p>
+          <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+            When I'm not analyzing data, I enjoy cycling, photography, video games, and exploring new technologies.
           </p>
           
           <h3 className="text-xl font-semibold mb-4 text-foreground">Skills</h3>
@@ -121,15 +134,18 @@ const Index = () => {
 
           <div className="mt-16">
             <h2 className="text-3xl font-bold mb-12 text-foreground">Education</h2>
-            {education.map((edu, index) => (
-              <div key={index} className="border-l-2 border-accent pl-6">
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
-                  <h3 className="text-xl font-semibold text-foreground">{edu.degree}</h3>
-                  <span className="text-sm text-muted-foreground">{edu.period}</span>
+            <div className="space-y-8">
+              {education.map((edu, index) => (
+                <div key={index} className="border-l-2 border-accent pl-6">
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
+                    <h3 className="text-xl font-semibold text-foreground">{edu.degree}</h3>
+                    <span className="text-sm text-muted-foreground">{edu.period}</span>
+                  </div>
+                  <p className="text-accent font-medium mb-3">{edu.school}</p>
+                  <p className="text-muted-foreground leading-relaxed">{edu.description}</p>
                 </div>
-                <p className="text-accent font-medium">{edu.school}</p>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -142,18 +158,26 @@ const Index = () => {
             I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
-            <Button variant="outline" className="border-border hover:bg-secondary" size="lg">
-              <Mail className="mr-2 h-4 w-4" />
-              jane@example.com
-            </Button>
-            <Button variant="outline" className="border-border hover:bg-secondary" size="lg">
-              <Linkedin className="mr-2 h-4 w-4" />
-              LinkedIn
-            </Button>
-            <Button variant="outline" className="border-border hover:bg-secondary" size="lg">
-              <Github className="mr-2 h-4 w-4" />
-              GitHub
-            </Button>
+            <a href="mailto:dnlvocatio@gmail.com" className="inline-block">
+              <Button variant="outline" className="border-border hover:bg-secondary" size="lg">
+                <Mail className="mr-2 h-4 w-4" />
+                dnlvocatio@gmail.com
+              </Button>
+            </a>
+
+            <a href="https://www.linkedin.com/in/danielnursen" target="_blank" rel="noopener noreferrer" className="inline-block">
+              <Button variant="outline" className="border-border hover:bg-secondary" size="lg">
+                <Linkedin className="mr-2 h-4 w-4" />
+                LinkedIn
+              </Button>
+            </a>
+
+            <a href="https://github.com/dannur25" target="_blank" rel="noopener noreferrer" className="inline-block">
+              <Button variant="outline" className="border-border hover:bg-secondary" size="lg">
+                <Github className="mr-2 h-4 w-4" />
+                GitHub
+              </Button>
+            </a>
           </div>
         </div>
       </section>
@@ -161,7 +185,7 @@ const Index = () => {
       {/* Footer */}
       <footer className="py-8 px-6 border-t border-border">
         <div className="max-w-4xl mx-auto text-center text-sm text-muted-foreground">
-          <p>© 2024 Jane Anderson. All rights reserved.</p>
+          <p>© 2024 Daniel Nursen. All rights reserved.</p>
         </div>
       </footer>
     </div>

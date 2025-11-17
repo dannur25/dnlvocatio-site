@@ -10,34 +10,6 @@ const Blog = () => {
       readTime: "8 min read",
       excerpt: "A deep dive into how to properly interpret p-values and confidence intervals when running experiments. Learn why statistical significance doesn't always mean practical significance.",
       tags: ["Statistics", "A/B Testing", "Analytics"]
-    },
-    {
-      title: "Building Efficient ETL Pipelines with Python",
-      date: "2024-02-28",
-      readTime: "12 min read",
-      excerpt: "Best practices for extracting, transforming, and loading data at scale. Covers pandas optimization techniques and automation strategies.",
-      tags: ["Python", "ETL", "Data Engineering"]
-    },
-    {
-      title: "Data Visualization Best Practices",
-      date: "2024-02-10",
-      readTime: "6 min read",
-      excerpt: "How to create compelling visualizations that tell a story. Tips for choosing the right chart types and avoiding common pitfalls.",
-      tags: ["Visualization", "Tableau", "Power BI"]
-    },
-    {
-      title: "SQL Query Optimization Techniques",
-      date: "2024-01-22",
-      readTime: "10 min read",
-      excerpt: "Common query performance issues and how to fix them. Learn about indexes, query plans, and writing efficient joins.",
-      tags: ["SQL", "Database", "Performance"]
-    },
-    {
-      title: "Introduction to Predictive Analytics",
-      date: "2024-01-05",
-      readTime: "15 min read",
-      excerpt: "Getting started with machine learning for business forecasting. An overview of regression models and time series analysis.",
-      tags: ["Machine Learning", "Forecasting", "Python"]
     }
   ];
 
@@ -65,7 +37,7 @@ const Blog = () => {
             Blog
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl">
-            Insights on data analysis, visualization, and everything in between.
+            Insights on everything.
           </p>
         </div>
       </section>
@@ -115,7 +87,7 @@ const Blog = () => {
       {/* Footer */}
       <footer className="py-8 px-6 border-t border-border">
         <div className="max-w-4xl mx-auto text-center text-sm text-muted-foreground">
-          <p>© 2024 Jane Anderson. All rights reserved.</p>
+          <p>© 2024 Daniel Nursen. All rights reserved.</p>
         </div>
       </footer>
     </div>
