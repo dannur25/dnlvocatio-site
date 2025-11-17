@@ -4,10 +4,7 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 export default defineConfig(({ mode }) => ({
-  // This makes the site work under BOTH:
-  // - https://dnlvocatio.com
-  // - https://dannur25.github.io/dnlvocatio-site/
-  base: "/dnlvocatio-site/",
+  base: "/",  // 👈 IMPORTANT: root base for custom domain
 
   server: {
     host: "::",
