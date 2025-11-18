@@ -104,6 +104,22 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
+  /* Set site-wide light sans-serif */
+  html, body {
+    font-family: "Manrope", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+    font-weight: 300;
+  }
+
+  /* Slightly loosen letter spacing for better readability with Manrope */
+  html, body, #root {
+    letter-spacing: 0.04em;
+  }
+
+  /* Slightly more spacing on headings to keep them airy */
+  h1, h2, h3, h4, h5, h6 {
+    letter-spacing: 0.02em;
+  }
+
   body {
     @apply bg-background text-foreground;
   }
