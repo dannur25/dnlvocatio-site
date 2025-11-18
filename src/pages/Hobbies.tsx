@@ -4,27 +4,39 @@ const Hobbies = () => {
       <main className="max-w-4xl mx-auto px-6 py-16">
         <h1 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">Hobbies</h1>
 
-        <section className="mb-12">
-          <h2 className="text-2xl font-semibold mb-3 text-foreground">Cycling</h2>
-          <p className="text-muted-foreground mb-4">I enjoy cycling for fitness and exploration. I like long rides and discovering new routes.</p>
-          <div className="w-full h-48 bg-muted rounded-md flex items-center justify-center text-sm text-muted-foreground">Image placeholder</div>
-        </section>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <a href="/hobbies/cycling" className="block">
+            <div className="w-full h-56 bg-muted rounded-md overflow-hidden mb-3 flex items-center justify-center"> 
+              <img src="/cycling/happy_selfie.jpg" alt="Cycling" className="w-full h-full object-cover" />
+            </div>
+            <h3 className="text-xl font-semibold text-foreground">Cycling</h3>
+            <p className="text-muted-foreground text-sm">because I like speed.</p>
+          </a>
 
-        <section className="mb-12">
-          <h2 className="text-2xl font-semibold mb-3 text-foreground">Photography</h2>
-          <p className="text-muted-foreground mb-4">I take photos when traveling and while exploring the city. I focus on landscapes and moments.</p>
-          <div className="w-full h-48 bg-muted rounded-md flex items-center justify-center text-sm text-muted-foreground">Image placeholder</div>
-        </section>
+          <a href="/hobbies/travel" className="block">
+            <div className="w-full h-56 bg-muted rounded-md overflow-hidden mb-3 flex items-center justify-center"> 
+              <img src="/travel/rolls_royce_cullinan.jpg" alt="Travel" className="w-full h-full object-cover" />
+            </div>
+            <h3 className="text-xl font-semibold text-foreground">Travel</h3>
+            <p className="text-muted-foreground text-sm">because I like escaping.</p>
+          </a>
 
-        <section className="mb-12">
-          <h2 className="text-2xl font-semibold mb-3 text-foreground">Video Games</h2>
-          <p className="text-muted-foreground mb-4">I play a mix of narrative and strategy games. Games are a creative outlet and a way to relax.</p>
-        </section>
+          <a href="/hobbies/running" className="block">
+            <div className="w-full h-56 bg-muted rounded-md overflow-hidden mb-3 flex items-center justify-center"> 
+              <img src="/running/half_marathon.jpg" alt="Running" className="w-full h-full object-cover object-[center_5%]" />
+            </div>
+            <h3 className="text-xl font-semibold text-foreground">Running</h3>
+            <p className="text-muted-foreground text-sm">because I like challenges.</p>
+          </a>
 
-        <section>
-          <h2 className="text-2xl font-semibold mb-3 text-foreground">Exploring Technology</h2>
-          <p className="text-muted-foreground mb-4">I enjoy tinkering with new tools, frameworks and small projects to learn and experiment.</p>
-        </section>
+          <a href="/hobbies/fishing" className="block">
+            <div className="w-full h-56 bg-muted rounded-md overflow-hidden mb-3 flex items-center justify-center"> 
+              <img src="/fishing/boating_life.jpg" alt="Fishing" className="w-full h-full object-cover object-[center_60%]" />
+            </div>
+            <h3 className="text-xl font-semibold text-foreground">Fishing</h3>
+            <p className="text-muted-foreground text-sm">because I like peace.</p>
+          </a>
+        </div>
       </main>
 
       <footer className="py-8 px-6 border-t border-border">
