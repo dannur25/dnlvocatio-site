@@ -4,11 +4,10 @@ const About = () => {
       <main className="max-w-4xl mx-auto px-6 py-16">
         <h1 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">About</h1>
         <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-          I'm someone who enjoys understanding how things work — whether in data, people, or the world around me. My interests sit at the intersection of analysis, problem-solving, and thoughtful design. I like building structured solutions, learning new tools, and creating things that are useful, clear, and well-crafted.
+          Man, 25.
         </p>
-
         <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-          Outside of work, I tend to dive into a mix of reading, technology, and projects that help me grow in depth rather than speed. This site is where I share some of that journey.
+          simul justus et peccator.
         </p>
       </main>
 
