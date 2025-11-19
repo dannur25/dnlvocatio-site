@@ -14,7 +14,9 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ["Manrope", "ui-sans-serif", "system-ui", "-apple-system", "Segoe UI", "Roboto", "Helvetica Neue", "Arial"],
+        // Using Radley as the primary site font (applied globally in CSS).
+        // Radley is a serif display face; include serif fallbacks for safety.
+        sans: ["Radley", "ui-serif", "Georgia", "Times New Roman", "serif"],
       },
       colors: {
         border: "hsl(var(--border))",
