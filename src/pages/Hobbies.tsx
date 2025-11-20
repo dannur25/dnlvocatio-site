@@ -38,6 +38,14 @@ const Hobbies = () => {
             <h3 className="text-xl font-semibold text-foreground">Fishing</h3>
             <p className="text-muted-foreground text-sm">because I like peace.</p>
           </Link>
+
+          <Link to="/hobbies/reading" className="block">
+            <div className="w-full h-56 bg-muted rounded-md overflow-hidden mb-3 flex items-center justify-center"> 
+              <img src="/reading/reading_book.jpg" alt="Reading" className="w-full h-full object-cover object-[center_40%]" />
+            </div>
+            <h3 className="text-xl font-semibold text-foreground">Reading</h3>
+            <p className="text-muted-foreground text-sm">because I like inspiration.</p>
+          </Link>
         </div>
       </main>
 
