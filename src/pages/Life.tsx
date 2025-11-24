@@ -1,13 +1,20 @@
 import { Link } from "react-router-dom";
 
-const Hobbies = () => {
+const Life = () => {
   return (
     <div className="min-h-screen bg-background pt-28">
       <main className="max-w-4xl mx-auto px-6 py-16">
-        <Link to="/life" className="text-sm text-muted-foreground hover:text-foreground">← Back</Link>
-        
-        <h1 className="text-4xl md:text-5xl font-bold mb-6 text-foreground mt-6">Hobbies</h1>
+        <h1 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">Life</h1>
 
+        <div className="prose prose-invert mb-12 max-w-none">
+          <p className="text-lg text-muted-foreground mb-8">
+            Beyond work, I'm passionate about living a balanced and intentional life. 
+            Through my hobbies I explore new perspectives, challenge myself, and find 
+            inspiration. These pursuits shape who I am and inform my approach to everything I do.
+          </p>
+        </div>
+
+        <h2 className="text-3xl font-semibold text-foreground mb-6">Hobbies</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <Link to="/life/hobbies/cycling" className="block">
             <div className="w-full h-56 bg-muted rounded-md overflow-hidden mb-3 flex items-center justify-center"> 
@@ -60,4 +67,4 @@ const Hobbies = () => {
   );
 };
 
-export default Hobbies;
+export default Life;

@@ -80,7 +80,7 @@ const Reading = () => {
   return (
     <div className="min-h-screen bg-background pt-28">
       <main className="px-6 py-12">
-        <Link to="/hobbies" className="text-sm text-muted-foreground hover:text-foreground">← Back</Link>
+        <Link to="/life" className="text-sm text-muted-foreground hover:text-foreground">← Back</Link>
 
         <div className="space-y-12 mt-6">
           {quotes.map((q, idx) => (
