@@ -11,11 +11,11 @@ const Header = () => {
           <NavLink to="/about" className="text-sm text-muted-foreground hover:text-foreground" activeClassName="text-foreground font-medium">
             About
           </NavLink>
-          <NavLink to="/resume" className="text-sm text-muted-foreground hover:text-foreground" activeClassName="text-foreground font-medium">
-            Resume
+          <NavLink to="/work" className="text-sm text-muted-foreground hover:text-foreground" activeClassName="text-foreground font-medium">
+            Work
           </NavLink>
-          <NavLink to="/hobbies" className="text-sm text-muted-foreground hover:text-foreground" activeClassName="text-foreground font-medium">
-            Hobbies
+          <NavLink to="/life" className="text-sm text-muted-foreground hover:text-foreground" activeClassName="text-foreground font-medium">
+            Life
           </NavLink>
           <NavLink to="/contact" className="text-sm text-muted-foreground hover:text-foreground" activeClassName="text-foreground font-medium">
             Contact
