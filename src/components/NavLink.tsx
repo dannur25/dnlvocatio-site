@@ -1,6 +1,7 @@
 import { NavLink as RouterNavLink, NavLinkProps } from "react-router-dom";
-import { forwardRef } from "react";
+import React, { forwardRef } from "react";
 import { cn } from "@/lib/utils";
+import { event as gaEvent } from "@/lib/ga";
 
 interface NavLinkCompatProps extends Omit<NavLinkProps, "className"> {
   className?: string;
@@ -9,11 +10,28 @@ interface NavLinkCompatProps extends Omit<NavLinkProps, "className"> {
 }
 
 const NavLink = forwardRef<HTMLAnchorElement, NavLinkCompatProps>(
-  ({ className, activeClassName, pendingClassName, to, ...props }, ref) => {
+  ({ className, activeClassName, pendingClassName, to, onClick, ...props }, ref) => {
+    const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+      try {
+        gaEvent("select_content", {
+          content_type: "nav_link",
+          item_id: typeof to === "string" ? to : String(to),
+        });
+      } catch (err) {
+        // ignore analytics errors
+      }
+
+      if (onClick) {
+        // forward original click handler
+        (onClick as any)(e);
+      }
+    };
+
     return (
       <RouterNavLink
         ref={ref}
         to={to}
+        onClick={handleClick}
         className={({ isActive, isPending }) =>
           cn(className, isActive && activeClassName, isPending && pendingClassName)
         }
