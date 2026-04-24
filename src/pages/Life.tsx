@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Footer from "@/components/Footer";
 
 const Life = () => {
   return (
@@ -29,7 +30,7 @@ const Life = () => {
               <img src="/travel/rolls_royce_cullinan.jpg" alt="Travel" className="w-full h-full object-cover" />
             </div>
             <h3 className="text-xl font-semibold text-foreground">Travel</h3>
-            <p className="text-muted-foreground text-sm">because I like escaping.</p>
+            <p className="text-muted-foreground text-sm">because I like exploring.</p>
           </Link>
 
           <Link to="/life/hobbies/running" className="block">
@@ -58,11 +59,7 @@ const Life = () => {
         </div>
       </main>
 
-      <footer className="py-8 px-6 border-t border-border">
-        <div className="max-w-4xl mx-auto text-center text-sm text-muted-foreground">
-          <p>© 2025 Daniel Nursen. All rights reserved.</p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };

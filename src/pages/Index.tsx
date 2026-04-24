@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (

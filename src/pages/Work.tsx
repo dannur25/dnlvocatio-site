@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Footer from "@/components/Footer";
 
 const Work = () => {
   return (
@@ -23,11 +24,7 @@ const Work = () => {
         </div>
       </main>
 
-      <footer className="py-8 px-6 border-t border-border">
-        <div className="max-w-4xl mx-auto text-center text-sm text-muted-foreground">
-          <p>© 2025 Daniel Nursen. All rights reserved.</p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };

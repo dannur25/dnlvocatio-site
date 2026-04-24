@@ -1,12 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { Mail, Linkedin, Instagram } from "lucide-react";
+import Footer from "@/components/Footer";
 
 const Contact = () => {
   return (
     <div className="min-h-screen bg-background pt-28">
       <main className="max-w-4xl mx-auto px-6 py-16 text-center">
-        <h1 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">Contact</h1>
-        <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">Slide in my DMs.</p>
+        <h1 className="text-4xl md:text-5xl font-bold mb-8 text-foreground">Contact</h1>
+        
 
         <div className="flex gap-4 justify-center flex-wrap">
           <a href="mailto:dnlvocatio@gmail.com" className="inline-block">
@@ -32,11 +33,7 @@ const Contact = () => {
         </div>
       </main>
 
-      <footer className="py-8 px-6 border-t border-border">
-        <div className="max-w-4xl mx-auto text-center text-sm text-muted-foreground">
-          <p>© 2025 Daniel Nursen. All rights reserved.</p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };

@@ -1,3 +1,5 @@
+import Footer from "@/components/Footer";
+
 const About = () => {
   return (
     <div className="min-h-screen bg-background pt-28">
@@ -11,11 +13,7 @@ const About = () => {
         </p>
       </main>
 
-      <footer className="py-8 px-6 border-t border-border">
-        <div className="max-w-4xl mx-auto text-center text-sm text-muted-foreground">
-          <p>© 2025 Daniel Nursen. All rights reserved.</p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };
