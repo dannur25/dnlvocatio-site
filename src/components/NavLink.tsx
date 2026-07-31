@@ -22,8 +22,7 @@ const NavLink = forwardRef<HTMLAnchorElement, NavLinkCompatProps>(
       }
 
       if (onClick) {
-        // forward original click handler
-        (onClick as any)(e);
+        (onClick as React.MouseEventHandler<HTMLAnchorElement>)(e);
       }
     };
 
