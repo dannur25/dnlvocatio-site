@@ -36,7 +36,7 @@ const Reading = () => {
     {
       quote: "Our heart is restless, until it rests in thee.",
       author: "Augustine of Hippo, Confessions",
-      authorImage: "/reading/augustine_of_hippo_2.jpg",
+      authorImage: "/reading/augustine_of_hippo.jpg",
       fontFamily: "'EB Garamond', Georgia, 'Times New Roman', serif",
     },
     {
@@ -46,7 +46,7 @@ const Reading = () => {
       fontFamily: "'EB Garamond', Georgia, 'Times New Roman', serif",
     },
     {
-      quote: "There is an awful passage in John Bunyan's treatise, entitled \'Sighs from Hell'\, which full often rings in my ears:–'How many souls have blind priests been the means of destroying by their ignorance? Preaching that was no better for their souls than rats-bane to the body.'",
+      quote: "There is an awful passage in John Bunyan's treatise, entitled 'Sighs from Hell', which full often rings in my ears:–'How many souls have blind priests been the means of destroying by their ignorance? Preaching that was no better for their souls than rats-bane to the body.'",
       author: "Charles Spurgeon, Lectures to My Students",
       authorImage: "/reading/charles_spurgeon.jpg",
       fontFamily: "'EB Garamond', Georgia, 'Times New Roman', serif",
