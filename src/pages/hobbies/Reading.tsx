@@ -36,7 +36,7 @@ const Reading = () => {
     {
       quote: "Our heart is restless, until it rests in thee.",
       author: "Augustine of Hippo, Confessions",
-      authorImage: "/reading/augustine_of_hippo_2.jpg",
+      authorImage: "/reading/augustine_of_hippo.jpg",
       fontFamily: "'EB Garamond', Georgia, 'Times New Roman', serif",
     },
     {
