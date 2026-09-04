@@ -14,9 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        // Using Radley as the primary site font (applied globally in CSS).
-        // Radley is a serif display face; include serif fallbacks for safety.
-        sans: ["Radley", "ui-serif", "Georgia", "Times New Roman", "serif"],
+        // Newsreader is the primary site font (applied globally in CSS).
+        sans: ["Newsreader", "ui-serif", "Georgia", "Times New Roman", "serif"],
       },
       colors: {
         border: "hsl(var(--border))",

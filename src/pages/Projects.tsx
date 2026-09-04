@@ -6,20 +6,20 @@ const Projects = () => {
     {
       title: "Project 1",
       description: "Description of your first project.",
-      link: "/work/projects/1",
+      link: "/about/projects/1",
     },
     {
       title: "Project 2",
       description: "Description of your second project.",
-      link: "/work/projects/2",
+      link: "/about/projects/2",
     },
   ];
 
   return (
     <div className="min-h-screen bg-background pt-28">
       <main className="max-w-4xl mx-auto px-6 py-16">
-        <Link to="/work" className="text-sm text-muted-foreground hover:text-foreground">← Back</Link>
-        
+        <Link to="/about" className="text-sm text-muted-foreground hover:text-foreground">← Back</Link>
+
         <h1 className="text-4xl md:text-5xl font-bold mb-6 text-foreground mt-6">Projects</h1>
 
         <div className="space-y-6">

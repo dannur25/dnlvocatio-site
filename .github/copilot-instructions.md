@@ -27,6 +27,7 @@ npx vite build      # Production build (cross-platform)
 - Tailwind utilities + `cn()` from `@/lib/utils`
 - Functional components, arrow functions, default exports
 - All routes in `App.tsx` above the catch-all `*`
+- Journal entries live in the `entries` array at the top of `src/pages/Journal.tsx`, newest first
 - Images in `public/<hobby>/`, referenced by absolute path
 
 ## Constraints

@@ -2,7 +2,7 @@
 
 ## Project overview
 
-Personal portfolio and life site for Daniel Nursen, a data analyst. Deployed at **dnlvocatio.com** via GitHub Pages. The site has sections for About, Work (resume + projects), Life (hobby photo/quote galleries), and Contact.
+Personal portfolio and life site for Daniel Nursen, a data analyst. Deployed at **dnlvocatio.com** via GitHub Pages. The site has sections for About (bio + resume + projects), Journal (dated entries with photos), Life (hobby photo/quote galleries), and Contact.
 
 ## Architecture and directory map
 
@@ -75,7 +75,8 @@ There is no test suite. Validate changes by:
 - **Styling:** Tailwind utility classes; design tokens via CSS custom properties in `index.css`. Use the `cn()` helper from `@/lib/utils` to merge class names.
 - **shadcn/ui components:** Located in `src/components/ui/`. Do not hand-edit these files. Add new components via the shadcn CLI (`npx shadcn-ui@latest add <component>`).
 - **Page structure:** Each page is self-contained, renders `<Footer />` at the bottom (hobby sub-pages are an exception — they omit it).
-- **Routing:** All routes defined in `App.tsx`. Add new routes above the catch-all `*` route.
+- **Routing:** All routes defined in `App.tsx`. Add new routes above the catch-all `*` route. The legacy `/work*` paths redirect to their `/about*` equivalents.
+- **Journal entries:** `src/pages/Journal.tsx` renders from an `entries` array at the top of the file, newest first. Add a new object to publish an entry.
 - **Analytics:** Use `@/lib/ga` helpers (`pageview`, `event`) for custom tracking. `ScrollToTop` already tracks page views on route changes.
 - **Images:** Stored in `public/<hobby>/`. Referenced with absolute paths (e.g., `/cycling/photo.jpg`).
 
@@ -108,7 +109,7 @@ None required. The GA4 measurement ID is hardcoded (frontend analytics; not a se
 ## Known limitations
 
 - `npm run build` fails on Windows due to `cp` command. Use `npx vite build` on Windows.
-- Projects page contains placeholder content with links to non-existent routes.
+- Projects page contains placeholder content with links to non-existent routes, and is presented as "work in progress" on the About page.
 - Many shadcn/ui components and npm packages are installed but unused (legacy from Lovable scaffold).
 - No automated tests exist.
 - Dark mode CSS variables are defined but there is no user-facing theme toggle.

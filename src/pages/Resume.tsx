@@ -3,25 +3,43 @@ import Footer from "@/components/Footer";
 const Resume = () => {
   const experiences = [
     {
-      title: "Data Analyst",
       company: "Gjensidige Forsikring",
-      period: "2024 - Present",
-      description:
-        "I've been involved in AI, automation, and web analytics initiatives in the Claims division. Working on building and maintaining ETL pipelines through dbt-models and visualizing in Power BI. Currently focused on customer experience and insight development.",
+      roles: [
+        {
+          title: "Analytics Engineer",
+          period: "Dec 2025 - Present",
+          description:
+            "Working as the lead Analytics Engineer, responsible for modeling the data foundation for the Workforce Management (WFM) project.",
+        },
+        {
+          title: "Data Analyst",
+          period: "2024 - Dec 2025",
+          description:
+            "I've been involved in AI, automation, and web analytics initiatives in the Claims division. Working on building and maintaining ETL pipelines through dbt-models and visualizing in Power BI. Focused on customer experience and insight development.",
+        },
+      ],
     },
     {
-      title: "Consulting Intern",
       company: "Movability",
-      period: "2022 - 2024",
-      description:
-        "Responsible for bookkeeping and preparation of accounts, and research on various topics regarding mobility.",
+      roles: [
+        {
+          title: "Consulting Intern",
+          period: "2022 - 2024",
+          description:
+            "Responsible for bookkeeping and preparation of accounts, and research on various topics regarding mobility.",
+        },
+      ],
     },
     {
-      title: "Business Analyst Intern",
       company: "SAS Institute",
-      period: "Aug 2023 - Oct 2023",
-      description:
-        "Worked in a team analyzing business data for a telecom client to deliver actionable insights that optimized operations. Built end-to-end analytics solutions using SAS, including data transformation, modeling, and visualization.",
+      roles: [
+        {
+          title: "Business Analyst Intern",
+          period: "Aug 2023 - Oct 2023",
+          description:
+            "Worked in a team analyzing business data for a telecom client to deliver actionable insights that optimized operations. Built end-to-end analytics solutions using SAS, including data transformation, modeling, and visualization.",
+        },
+      ],
     },
   ];
 
@@ -48,16 +66,6 @@ const Resume = () => {
         <h1 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">Resume</h1>
 
         <section className="mb-12">
-          <h2 className="text-2xl font-semibold mb-6 text-foreground">Bio</h2>
-        <div className="text-lg text-muted-foreground leading-relaxed space-y-4">
-            <p>I'm a data analyst at a large Nordic insurance company. I am passionate about leveraging data to solve complex business problems and drive strategic decision-making.</p>
-            <p>I hold a Master of Science in Business Analytics from BI Norwegian Business School, where I wrote my thesis on predicting tax avoidance using a CETR-based model while incorporating social network characteristics.</p>
-            <p>My top 5 CliftonStrengths are Context, Relator, Discipline, Achiever and Consistency.</p>
-            <p>When I'm not analyzing data, I enjoy cycling, photography, video games, and exploring new technologies.</p>
-        </div>
-        </section>
-
-        <section className="mb-12">
         <h2 className="text-2xl font-semibold mb-6 text-foreground">Skills</h2>
         <div className="flex flex-wrap gap-3">
           {[
@@ -79,15 +87,23 @@ const Resume = () => {
 
         <section className="mb-12">
           <h2 className="text-2xl font-semibold mb-6 text-foreground">Experience</h2>
-          <div className="space-y-8">
-            {experiences.map((exp, idx) => (
-              <div key={idx} className="border-l-2 border-accent pl-6">
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
-                  <h3 className="text-xl font-semibold text-foreground">{exp.title}</h3>
-                  <span className="text-sm text-muted-foreground">{exp.period}</span>
+          <div className="space-y-10">
+            {experiences.map((exp) => (
+              <div key={exp.company} className="relative border-l-2 border-accent pl-6 pb-2">
+                <h3 className="text-xl font-semibold text-foreground mb-5">{exp.company}</h3>
+                <div className="space-y-6">
+                  {exp.roles.map((role) => (
+                    <div key={role.title} className="relative">
+                      {/* Marker sits on the company line to mark each role change */}
+                      <span className="absolute left-[-1.875rem] top-1.5 h-2.5 w-2.5 rounded-full bg-accent ring-4 ring-background" />
+                      <div className="flex flex-col md:flex-row md:items-baseline md:justify-between mb-2">
+                        <p className="text-accent font-medium">{role.title}</p>
+                        <span className="text-sm text-muted-foreground">{role.period}</span>
+                      </div>
+                      <p className="text-muted-foreground leading-relaxed">{role.description}</p>
+                    </div>
+                  ))}
                 </div>
-                <p className="text-accent font-medium mb-3">{exp.company}</p>
-                <p className="text-muted-foreground leading-relaxed">{exp.description}</p>
               </div>
             ))}
           </div>
