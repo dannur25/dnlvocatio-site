@@ -2,12 +2,12 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Index from "./pages/Index";
 import About from "./pages/About";
-import Work from "./pages/Work";
+import Journal from "./pages/Journal";
+import Wedding from "./pages/Wedding";
 import Resume from "./pages/Resume";
-import Projects from "./pages/Projects";
 import Life from "./pages/Life";
 import Cycling from "./pages/hobbies/Cycling";
 import Travel from "./pages/hobbies/Travel";
@@ -32,9 +32,12 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
-          <Route path="/work" element={<Work />} />
-          <Route path="/work/resume" element={<Resume />} />
-          <Route path="/work/projects" element={<Projects />} />
+          <Route path="/about/resume" element={<Resume />} />
+          <Route path="/journal" element={<Journal />} />
+          <Route path="/journal/wedding" element={<Wedding />} />
+          {/* Legacy /work URLs */}
+          <Route path="/work" element={<Navigate to="/about" replace />} />
+          <Route path="/work/resume" element={<Navigate to="/about/resume" replace />} />
           <Route path="/life" element={<Life />} />
           <Route path="/life/hobbies/cycling" element={<Cycling />} />
           <Route path="/life/hobbies/travel" element={<Travel />} />

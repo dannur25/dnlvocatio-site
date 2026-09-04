@@ -11,8 +11,8 @@ const Header = () => {
           <NavLink to="/about" className="text-sm text-muted-foreground hover:text-foreground" activeClassName="text-foreground font-medium">
             About
           </NavLink>
-          <NavLink to="/work" className="text-sm text-muted-foreground hover:text-foreground" activeClassName="text-foreground font-medium">
-            Work
+          <NavLink to="/journal" className="text-sm text-muted-foreground hover:text-foreground" activeClassName="text-foreground font-medium">
+            Journal
           </NavLink>
           <NavLink to="/life" className="text-sm text-muted-foreground hover:text-foreground" activeClassName="text-foreground font-medium">
             Life
