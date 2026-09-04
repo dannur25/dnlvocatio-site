@@ -7,8 +7,7 @@ const entries = [
     period: "June 2026",
     body: (
       <>
-        We got married in New York. A day surrounded by the people we love, in the city we
-        love, from the bridge in the morning to the ballroom at night.{" "}
+        We got married in New York. An unforgettable day surrounded by friends and family.{" "}
         <Link
           to="/journal/wedding"
           className="text-accent underline underline-offset-4 hover:no-underline"

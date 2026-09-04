@@ -8,7 +8,6 @@ import About from "./pages/About";
 import Journal from "./pages/Journal";
 import Wedding from "./pages/Wedding";
 import Resume from "./pages/Resume";
-import Projects from "./pages/Projects";
 import Life from "./pages/Life";
 import Cycling from "./pages/hobbies/Cycling";
 import Travel from "./pages/hobbies/Travel";
@@ -34,13 +33,11 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
           <Route path="/about/resume" element={<Resume />} />
-          <Route path="/about/projects" element={<Projects />} />
           <Route path="/journal" element={<Journal />} />
           <Route path="/journal/wedding" element={<Wedding />} />
           {/* Legacy /work URLs */}
           <Route path="/work" element={<Navigate to="/about" replace />} />
           <Route path="/work/resume" element={<Navigate to="/about/resume" replace />} />
-          <Route path="/work/projects" element={<Navigate to="/about/projects" replace />} />
           <Route path="/life" element={<Life />} />
           <Route path="/life/hobbies/cycling" element={<Cycling />} />
           <Route path="/life/hobbies/travel" element={<Travel />} />
